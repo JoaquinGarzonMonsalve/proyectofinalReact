@@ -1,0 +1,45 @@
+import React from "react";
+import {useEffect, useState } from "react";
+
+const ItemListContainer = (props) => {
+  let [contador, setContador] = useState(0);
+  let [minPrice, setMinPrice] = useState(1000);
+  let [loadMore, setLoadMore] = useState(false);
+  let [open, setOpen] = useState(false);
+  let [searchText, setSearchText] = useState("");
+
+  const handleClick = (e) => {
+    setContador(contador + 1);
+  };
+  const handleOnChange = (e) => {
+    setSearchText(e.target.value);
+  };
+
+  const handleToggleDrawer = (e) => {
+    setOpen(!open);
+  };
+
+  function hola() {
+    console.log("holawer");
+  }
+
+  useEffect(hola, [contador]);
+
+  return (
+    <>
+      <div className="item_list_container">{props.mensaje}</div>
+      <p> contador : {contador}</p>
+      <button onClick={handleClick}> sumas </button>
+      <p> Drawr Open : {open ? "abriert" : "cerrado"} </p>
+      <button onClick={handleToggleDrawer}>toggle Drawer</button>
+      <input onChange={handleOnChange} type="text" />
+    </>
+  );
+};
+export default ItemListContaine
+
+
+
+ahora efecto
+
+
