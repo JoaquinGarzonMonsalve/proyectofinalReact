@@ -11,10 +11,10 @@ const Item = ({ producto }) => {
   return (
     <article className="articulo" key={producto.id}>
       <p className="nombres"> {producto.title}</p>
-      <p> {producto.category}</p>
+      {/* <p> {producto.category}</p> */}
 
       <img className="imagenes" src={producto.image} alt={producto.title} />
-      <p>$ {producto.price}</p>
+      <p className="precios">$ {producto.price}</p>
       <div className="botoneraDetalle">
         <button onClick={addProduct} className="botonesDetalle">
           Añadir al carrito

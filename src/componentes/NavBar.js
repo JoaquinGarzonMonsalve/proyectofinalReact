@@ -6,11 +6,11 @@ const NavBar = (props) => {
   return (
     <>
       <div className="contenedor_navbar">
-        <h2> DeTodo </h2>
+        <h2 className="nombreTienda"> MODA FGM </h2>
         <nav className={props.isclase}>
           <Link to="/"> HOME</Link>
-          <Link to="/productos/ropa"> ropa</Link>
-          <Link to="/productos/joyas"> joyas</Link>
+          <Link to="/productos/ropa"> Ropa</Link>
+          <Link to="/productos/joyas"> Joyas</Link>
           <CartWidget />
         </nav>
       </div>
